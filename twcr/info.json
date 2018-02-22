@@ -1,9 +1,9 @@
 {
     "AUTHOR" : "Rene Cogs",
-    "INSTALL_MSG" : "NS #1 Most Endorsements Can Now Be Viewed",
+    "INSTALL_MSG" : "NS Today's World Census Report Can Now be Viewed",
     "NAME" : "nsextras",
-    "SHORT" : "Current NS Most Endorsed Nations",
-    "DESCRIPTION" : "This commands shows the current NS Most Endorsed Nation.",
+    "SHORT" : "Current World Census Report",
+    "DESCRIPTION" : "This commands shows the name of today's World Census Report.",
     "TAGS" : ["example", "tags", "list"],
     "REQUIREMENTS" : ["tabulate", "Pillow"],
     "HIDDEN" : false
