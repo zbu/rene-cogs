@@ -22,7 +22,7 @@ class nsextras:
         async with aiohttp.get(url) as response:
             soupObject = BeautifulSoup(await response.text(), "html.parser")
         try:
-            online = soupObject.find(class_='rmbrow odd post-' + id).find('div').get_text()
+            online = soupObject.find(class_='rmbrow odd post-' + id).find('class=_"rmbmsg2-container-main"').find('div').get_text()
             await self.bot.say("RMB Post: " + online)
         except:
             await self.bot.say("ERROR.")
