@@ -25,7 +25,8 @@ class nsextras:
             online = soupObject.find(class_='rmbrow odd post-' + id).find(class_="rmbmsg2-container-main").get_text()
             await self.bot.say("RMB Post: " + online)
         except:
-            await self.bot.say("ERROR.")
+            online = soupObject.find(class_='rmbrow even post-' + id).find(class_="rmbmsg2-container-main").get_text()
+            await self.bot.say("RMB Post: " + online)
 
 def setup(bot):
     bot.add_cog(nsextras(bot))
