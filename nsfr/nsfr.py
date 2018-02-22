@@ -4,7 +4,7 @@ try: # check if BeautifulSoup4 is installed
     from bs4 import BeautifulSoup
 	soupAvailable = True
 except:
-	soupAvailable = False
+    soupAvailable = False
 import aiohttp
 
 class nsextras:
