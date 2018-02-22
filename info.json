@@ -1,0 +1,7 @@
+{
+    "AUTHOR" : "Rene Cogs",
+    "INSTALL_MSG" : "Welcome to Rene Cogs",
+    "NAME" : "NS Extras",
+    "SHORT" : "Addons for NationStates, extra features",
+    "DESCRIPTION" : "NS Extras features a few simple commands to retrieve data from NationStates and display them in Discord."
+}
