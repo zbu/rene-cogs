@@ -8,7 +8,7 @@ class nsextras:
         self.bot = bot
 
    @commands.command()
-    async def nsfr(self):
+   async def nsfr(self):
         """Today's featured region"""
 
         #Your code will go here
