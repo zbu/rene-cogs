@@ -7,9 +7,9 @@ class nsextras:
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command()
+@commands.command()
 async def nsfr(self):
-    """Today's featured region"""
+     """Today's featured region"""
 
 #Your code will go here
 url = "https://www.nationstates.net/page=world" #build the web adress
@@ -23,4 +23,3 @@ except:
 
 def setup(bot):
     bot.add_cog(Mycog(bot))
-
