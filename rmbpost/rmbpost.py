@@ -14,11 +14,11 @@ class nsextras:
         self.bot = bot
 
     @commands.command()
-    async def rmbpost(self, region, id):
+    async def rmbpost(self, id):
         """Displays Specified RMB Post Text"""
 
         #Your code will go here
-        url = "https://www.nationstates.net/region=" + region #build the web adress
+        url = "https://www.nationstates.net/page=rmb/postid=" + id #build the web adress
         async with aiohttp.get(url) as response:
             soupObject = BeautifulSoup(await response.text(), "html.parser")
         try:
