@@ -1,5 +1,11 @@
 import discord
 from discord.ext import commands
+try: # check if BeautifulSoup4 is installed
+    from bs4 import BeautifulSoup
+	soupAvailable = True
+except:
+	soupAvailable = False
+import aiohttp
 
 class nsextras:
     """NS Extras"""
