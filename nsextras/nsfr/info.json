@@ -1,0 +1,10 @@
+{
+    "AUTHOR" : "Rene Cogs",
+    "INSTALL_MSG" : "NS Featured Regions can now be viewed",
+    "NAME" : "nsextras",
+    "SHORT" : "Current NS Featured Region",
+    "DESCRIPTION" : "This commands shows the current NS Featured Region.",
+    "TAGS" : ["example", "tags", "list"],
+    "REQUIREMENTS" : ["tabulate", "Pillow"],
+    "HIDDEN" : false
+}
