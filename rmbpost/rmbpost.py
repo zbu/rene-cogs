@@ -23,10 +23,12 @@ class nsextras:
             soupObject = BeautifulSoup(await response.text(), "html.parser")
         try:
             online = soupObject.find(class_='rmbrow odd post-' + id).find(class_="rmbmsg2-container-main").get_text()
-            await self.bot.say("RMB Post: " + online)
+            nation = soupObject.find(class_='nname').get_text()
+            await self.bot.say("From:" + nation "\nText: " + online)
         except:
             online = soupObject.find(class_='rmbrow even post-' + id).find(class_="rmbmsg2-container-main").get_text()
-            await self.bot.say("RMB Post: " + online)
+            nation = soupObject.find(class_='nname').get_text()
+            await self.bot.say("From:" + nation "\nText: " + online)
 
 def setup(bot):
     bot.add_cog(nsextras(bot))
