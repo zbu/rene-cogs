@@ -6,4 +6,5 @@ This is a free, open source bot for Discord. You can install it using the instru
 
 # installation
 [p]cog repo add nsextras https://github.com/zbu/rene-cogs
+
 [p]cog install nsextras [cog]
