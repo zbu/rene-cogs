@@ -7,19 +7,19 @@ class nsextras:
     def __init__(self, bot):
         self.bot = bot
 
-@commands.command()
-async def nsfr(self):
-   """Today's featured region"""
+    @commands.command()
+    async def nsfr(self):
+      """Today's featured region"""
 
-#Your code will go here
-url = "https://www.nationstates.net/page=world" #build the web adress
-async with aiohttp.get(url) as response:
-   soupObject = BeautifulSoup(await response.text(), "html.parser")
-try:
-   online = soupObject.find(class_='featuredregion').find('a').get_text()
-   await self.bot.say(online + ' is today's featured region')
-except:
-   await self.bot.say("ERROR.")
+      #Your code will go here
+      url = "https://www.nationstates.net/page=world" #build the web adress
+      async with aiohttp.get(url) as response:
+         soupObject = BeautifulSoup(await response.text(), "html.parser")
+      try:
+         online = soupObject.find(class_='featuredregion').find('a').get_text()
+         await self.bot.say(online + ' is today's featured region')
+      except:
+         await self.bot.say("ERROR.")
 
 def setup(bot):
    bot.add_cog(Mycog(bot))
