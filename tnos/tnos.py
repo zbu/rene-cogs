@@ -26,7 +26,7 @@ class nsextras:
             await self.bot.say(online + " total nations")
         except:
             await self.bot.say("ERROR.")
-		try:
+	    try:
 		    online2 = soupObject.find(href_='page=list_regions').get_text()
 			await self.bot.say(online2 + " total regions")
 		except:
