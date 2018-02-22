@@ -1,0 +1,10 @@
+{
+    "AUTHOR" : "Rene Cogs",
+    "INSTALL_MSG" : "NS #1 Most Endorsements Can Now Be Viewed",
+    "NAME" : "nsextras",
+    "SHORT" : "Current NS Most Endorsed Nations",
+    "DESCRIPTION" : "This commands shows the current NS Most Endorsed Nation.",
+    "TAGS" : ["example", "tags", "list"],
+    "REQUIREMENTS" : ["tabulate", "Pillow"],
+    "HIDDEN" : false
+}
