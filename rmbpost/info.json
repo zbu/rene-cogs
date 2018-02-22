@@ -1,0 +1,10 @@
+{
+    "AUTHOR" : "Rene Cogs",
+    "INSTALL_MSG" : "View RMB Post.",
+    "NAME" : "nsextras",
+    "SHORT" : "Specified RMB Post View",
+    "DESCRIPTION" : "This commands shows an RMB Post based upon its ID.",
+    "TAGS" : ["example", "tags", "list"],
+    "REQUIREMENTS" : ["tabulate", "Pillow"],
+    "HIDDEN" : false
+}
