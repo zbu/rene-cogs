@@ -22,12 +22,12 @@ class nsextras:
         async with aiohttp.get(url) as response:
             soupObject = BeautifulSoup(await response.text(), "html.parser")
         try:
-            online = soupObject.find(href_='page=list_nations').get_text()
+            online = soupObject.find('a').find(href_='page=list_nations').get_text()
             await self.bot.say(online + " total nations")
         except:
             await self.bot.say("ERROR.")
         try:
-            online2 = soupObject.find(href_='page=list_regions').get_text()
+            online2 = soupObject.find('a').find(href_='page=list_regions').get_text()
             await self.bot.say(online2 + " total regions")
         except:
             await self.bot.say("ERROR.")
