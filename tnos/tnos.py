@@ -28,8 +28,8 @@ class nsextras:
             await self.bot.say("ERROR.")
 	    try:
 		    online2 = soupObject.find(href_='page=list_regions').get_text()
-			await self.bot.say(online2 + " total regions")
-		except:
+		    await self.bot.say(online2 + " total regions")
+	    except:
 		    await self.bot.say("ERROR.")
 
 def setup(bot):
