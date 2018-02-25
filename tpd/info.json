@@ -1,0 +1,10 @@
+{
+    "AUTHOR" : "Rene Cogs",
+    "INSTALL_MSG" : "The top pinned dispatch of a region can now be viewed",
+    "NAME" : "nsextras",
+    "SHORT" : "Top Pinned Dispatch",
+    "DESCRIPTION" : "This commands shows the top pinned dispatch of a region.",
+    "TAGS" : ["example", "tags", "list"],
+    "REQUIREMENTS" : ["tabulate", "Pillow"],
+    "HIDDEN" : false
+}
