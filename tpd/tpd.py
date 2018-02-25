@@ -24,7 +24,7 @@ class nsextras:
         try:
             dispatchname = soupObject.find(class_='dispatchlist').find('li').find('h3').find('a').get_text()
             dispatchauthor = soupObject.find(class_='dispatchlist').find('li').find(class_='dispatchauthorline').find('a').find('span').get_text()
-			await self.bot.say(dispatchname + " by " + dispatchauthor)
+            await self.bot.say(dispatchname + " by " + dispatchauthor)
         except:
             await self.bot.say("This region has no pinned dispatches.")
 
