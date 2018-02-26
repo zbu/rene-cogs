@@ -1,7 +1,7 @@
 {
     "AUTHOR" : "Rene Cogs",
     "INSTALL_MSG" : "You can now say stuff. Yeah.",
-    "NAME" : "say",
+    "NAME" : "say65536",
     "SHORT" : "Says what is said after say.",
     "DESCRIPTION" : "Takes text after [p]say and repeats it.",
     "TAGS" : ["example", "tags", "list"],
