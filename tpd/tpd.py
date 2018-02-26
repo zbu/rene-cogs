@@ -23,8 +23,9 @@ class nsextras:
             soupObject = BeautifulSoup(await response.text(), "html.parser")
         try:
             dispatchname = soupObject.find(class_='dispatchlist').find('li').find('h3').find('a').get_text()
+            dispatchurl = soupObject.find(class_='dispatchlist').find('li').find('h3').find('a').attrs['href']
             dispatchauthor = soupObject.find(class_='dispatchlist').find('li').find(class_='dispatchauthorline').find('a').find('span').get_text()
-            await self.bot.say(dispatchname + " by " + dispatchauthor)
+            await self.bot.say(dispatchname + " by " + dispatchauthor + "\n" + dispatchurl)
         except:
             await self.bot.say("This region has no pinned dispatches.")
 
