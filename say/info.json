@@ -6,5 +6,5 @@
     "DESCRIPTION" : "Takes text after [p]say and repeats it.",
     "TAGS" : ["example", "tags", "list"],
     "REQUIREMENTS" : ["tabulate", "Pillow"],
-    "HIDDEN" : false
+    "HIDDEN" : true
 }
