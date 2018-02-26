@@ -10,8 +10,9 @@ class nsextras:
 
     @commands.command()
     @checks.admin_or_permissions(manage_server=True)
-    async def say(self, channel, *, text):
+    async def say(self, ctx, channel, *, text):
         """Displays what is said after say"""
+        server = ctx.message.server
 
         #Your code will go here
         c = discord.utils.get(server.channels, name=channel)
