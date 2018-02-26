@@ -8,6 +8,7 @@ class nsextras:
         self.bot = bot
 
     @commands.command(pass_context=True)
+    @checks.admin_or_permissions(manage_server=True)
     async def say(self, ctx, channel, *, text):
         """Displays what is said after say"""
         server = ctx.message.server
