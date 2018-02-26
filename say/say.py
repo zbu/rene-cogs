@@ -8,7 +8,7 @@ class nsextras:
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command()
+    @commands.command(pass_context=True)
     @checks.admin_or_permissions(manage_server=True)
     async def say(self, ctx, channel, *, text):
         """Displays what is said after say"""
