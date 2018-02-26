@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from .utils import checks
 
 class nsextras:
     """NS Extras"""
@@ -8,6 +9,7 @@ class nsextras:
         self.bot = bot
 
     @commands.command()
+    @checks.admin_or_permissions(manage_server=True)
     async def say(self, *, text):
         """Displays what is said after say"""
 
