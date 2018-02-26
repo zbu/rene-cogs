@@ -14,8 +14,8 @@ class nsextras:
         """Displays what is said after say"""
 
         #Your code will go here
-		c = discord.utils.get(server.channels, name=channel)
-		await self.bot.send_message(c, text)
+        c = discord.utils.get(server.channels, name=channel)
+        await self.bot.send_message(c, text)
 
 def setup(bot):
     bot.add_cog(nsextras(bot))
