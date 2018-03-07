@@ -28,6 +28,7 @@ class nsextras:
             flagpic = soupObject.find(class_='rmbdate').find('img').attrs['src']
             description = (online)
             footer_text = "Last active " + datetime
+            embed.title = "RMB Post"
             embed.set_author(name=nation, url="https://nationstates.net/" + nation)
             embed.set_thumbnail(url="https://nationstates.net" + flagpic)
             embed.set_footer(text=footer_text)
