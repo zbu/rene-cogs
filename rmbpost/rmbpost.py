@@ -32,7 +32,5 @@ class nsextras:
             embed.set_footer(text=footer_text)
             embed = discord.Embed(title="RMB Post", colour=0xCEFF00, description=online)
             await self.bot.say(embed=embed)
-        except:
-            await self.bot.say("This RMB Post does not exist.")
 def setup(bot):
     bot.add_cog(nsextras(bot))
