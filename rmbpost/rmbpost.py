@@ -22,7 +22,7 @@ class nsextras:
         async with aiohttp.get(url) as response:
             soupObject = BeautifulSoup(await response.text(), "html.parser")
         try:
-            online = soupObject.find(class_='rmbrow odd post-' + id).find(class_="rmbmsg2-container-main").get_text()
+            online = soupObject.find(class_='rmbmsg2-container').get_text()
             nation = soupObject.find(class_='nname').get_text()
             datetime = soupObject.find('time').get_text()
             flagpic = soupObject.find(class_='rmbdate').find('img').attrs['src']
@@ -34,17 +34,6 @@ class nsextras:
             embed.set_footer(text=footer_text)
             await self.bot.say(embed=embed)
         except:
-            online = soupObject.find(class_='rmbrow even post-' + id).find(class_="rmbmsg2-container-main").get_text()
-            nation = soupObject.find(class_='nname').get_text()
-            datetime = soupObject.find('time').get_text()
-            flagpic = soupObject.find(class_='rmbdate').find('img').attrs['src']
-            description = (online)
-            footer_text = "Last active " + datetime
-            embed = discord.Embed(colour=0xCEFF00, description=description)
-            embed.set_author(name=nation, url="https://nationstates.net/" + nation)
-            embed.set_thumbnail(url="https://nationstates.net" + flagpic)
-            embed.set_footer(text=footer_text)
-            await self.bot.say(embed=embed)
-
+            await self.bot.say("This RMB Post does not exist.")
 def setup(bot):
     bot.add_cog(nsextras(bot))
