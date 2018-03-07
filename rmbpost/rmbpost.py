@@ -20,16 +20,19 @@ class nsextras:
         #Your code will go here
         url = "https://www.nationstates.net/page=rmb/postid=" + id #build the web adress
         async with aiohttp.get(url) as response:
+		try:
             soupObject = BeautifulSoup(await response.text(), "html.parser")
             online = soupObject.find(class_='rmbmsg2-container').get_text()
             nation = soupObject.find(class_='nname').get_text()
             datetime = soupObject.find(class_='rmbdate').find('a').find('time').get_text()
             flagpic = soupObject.find(class_='rmbdate').find('img').attrs['src']
             footer_text = "Last active " + datetime
+            embed = discord.Embed(title="RMB Post", colour=0xCEFF00, description=online)
             embed.set_author(name=nation, url="https://nationstates.net/" + nation)
             embed.set_thumbnail(url="https://nationstates.net" + flagpic)
             embed.set_footer(text=footer_text)
-            embed = discord.Embed(title="RMB Post", colour=0xCEFF00, description=online)
             await self.bot.say(embed=embed)
+        except:
+            await self.bot.say("This RMB Post does not exist.")
 def setup(bot):
     bot.add_cog(nsextras(bot))
