@@ -28,10 +28,10 @@ class nsextras:
             flagpic = soupObject.find(class_='rmbdate').find('img').attrs['src']
             description = (online)
             footer_text = "Last active " + datetime
-            embed = discord.Embed(colour=0xCEFF00, description=description)
             embed.set_author(name=nation, url="https://nationstates.net/" + nation)
             embed.set_thumbnail(url="https://nationstates.net" + flagpic)
             embed.set_footer(text=footer_text)
+            embed = discord.Embed(colour=0xCEFF00, description=description)
             await self.bot.say(embed=embed)
         except:
             await self.bot.say("This RMB Post does not exist.")
