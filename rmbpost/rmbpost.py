@@ -26,7 +26,7 @@ class nsextras:
             nation = soupObject.find(class_='nname').get_text()
             datetime = soupObject.find('time').get_text()
             flagpic = soupObject.find(class_='rmbdate').find('img').attrs['src']
-			description = (online)
+            description = (online)
             footer_text = "Last active " + datetime
             embed = discord.Embed(colour=0xCEFF00, description=description)
             embed.set_author(name=nation, url="https://nationstates.net/" + nation)
@@ -38,7 +38,7 @@ class nsextras:
             nation = soupObject.find(class_='nname').get_text()
             datetime = soupObject.find('time').get_text()
             flagpic = soupObject.find(class_='rmbdate').find('img').attrs['src']
-			description = (online)
+            description = (online)
             footer_text = "Last active " + datetime
             embed = discord.Embed(colour=0xCEFF00, description=description)
             embed.set_author(name=nation, url="https://nationstates.net/" + nation)
