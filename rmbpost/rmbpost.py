@@ -14,7 +14,7 @@ class nsextras:
         self.bot = bot
 
     @commands.command(pass_context=True)
-    async def rmbpost(self, ctx, id):
+    async def rmbpost(self, id):
         """Displays Specified RMB Post Text"""
 
         #Your code will go here
@@ -24,12 +24,8 @@ class nsextras:
             online = soupObject.find(class_='rmbmsg2-container').get_text()
             nation = soupObject.find(class_='nname').get_text()
             datetime = soupObject.find(class_='rmbdate').find('a').find('time').get_text()
-            flagpic = soupObject.find(class_='rmbdate').find('img').attrs['src']
-            footer_text = "Last active " + datetime
-            embed = discord.Embed(title="RMB Post", colour=0xCEFF00, description=online)
+            footer_text = "Posted " + datetime
             embed.set_author(name=nation, url="https://nationstates.net/" + nation)
-            embed.set_thumbnail(url="https://nationstates.net" + flagpic)
-            embed.set_footer(text=footer_text)
-            await self.bot.say(embed=embed)
+            await self.bot.say("RMB Post by " . nation . "\n" . online . "\n" . footer_text)
 def setup(bot):
     bot.add_cog(nsextras(bot))
