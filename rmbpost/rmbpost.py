@@ -28,5 +28,8 @@ class nsextras:
             footer_text = "Posted " + datetime
             embed.set_author(name=nation, url="https://nationstates.net/" + nation)
             await self.bot.say("RMB Post by " + nation + "\n" + online + "\n" + footer_text)
+        except:
+            await self.bot.say("This RMB Post does not exist.")
+
 def setup(bot):
     bot.add_cog(nsextras(bot))
