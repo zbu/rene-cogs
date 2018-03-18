@@ -26,6 +26,6 @@ class nsextras:
             datetime = soupObject.find(class_='rmbdate').find('a').find('time').get_text()
             footer_text = "Posted " + datetime
             embed.set_author(name=nation, url="https://nationstates.net/" + nation)
-            await self.bot.say("RMB Post by " . nation . "\n" . online . "\n" . footer_text)
+            await self.bot.say("RMB Post by " + nation + "\n" + online + "\n" + footer_text)
 def setup(bot):
     bot.add_cog(nsextras(bot))
