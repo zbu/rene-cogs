@@ -13,7 +13,7 @@ class nsextras:
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(pass_context=True)
+    @commands.command()
     async def rmbpost(self, id):
         """Displays Specified RMB Post Text"""
 
