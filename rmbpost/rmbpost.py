@@ -22,11 +22,11 @@ class nsextras:
         async with aiohttp.get(url) as response:
             soupObject = BeautifulSoup(await response.text(), "html.parser")
         try:
-            online = soupObject.find(class_='rmbmsg2-container').get_text()
+            text = soupObject.find(class_='rmbmsg2-container').get_text()
             nation = soupObject.find(class_='nname').get_text()
             datetime = soupObject.find(class_='rmbdate').find('a').find('time').get_text()
             footer_text = "Posted " + datetime
-            await self.bot.say("RMB Post by " + nation + "\n" + online + "\n" + footer_text)
+            await self.bot.say("RMB Post by " + nation + "\n" + "" + "\n" + text + "\n" + "" + "\n" + footer_text)
         except:
             await self.bot.say("This RMB Post does not exist.")
 
