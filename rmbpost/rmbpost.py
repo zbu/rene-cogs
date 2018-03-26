@@ -25,8 +25,9 @@ class nsextras:
             text = soupObject.find(class_='rmbmsg2-container').get_text()
             nation = soupObject.find(class_='nname').get_text()
             datetime = soupObject.find(class_='rmbdate').find('a').find('time').get_text()
+            region = soupObject.find(class_='widebox').find('h2').find('a').get_text()
             footer_text = "Posted " + datetime
-            await self.bot.say("RMB Post by " + nation + "\n" + "" + "\n" + text + "\n" + "" + "\n" + footer_text)
+            await self.bot.say(region + " RMB" + "\n" + "by " + nation + "\n" + "" + "\n" + text + "\n" + "" + "\n" + footer_text)
         except:
             await self.bot.say("This RMB Post does not exist.")
 
