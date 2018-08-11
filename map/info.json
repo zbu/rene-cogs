@@ -1,0 +1,10 @@
+{
+    "AUTHOR" : "Rene Cogs",
+    "INSTALL_MSG" : "Map links",
+    "NAME" : "map",
+    "SHORT" : "Map links",
+    "DESCRIPTION" : "Map links",
+    "TAGS" : ["example", "tags", "list"],
+    "REQUIREMENTS" : ["tabulate", "Pillow"],
+    "HIDDEN" : false
+}
