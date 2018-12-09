@@ -1,5 +1,4 @@
 import discord
-import requests
 from discord.ext import commands
 try: # check if BeautifulSoup4 is installed
     from bs4 import BeautifulSoup
@@ -20,8 +19,6 @@ class nsextras:
 
         #Your code will go here
         url = "https://slink.be/rp/index.php?nation=" + nation + "&submit=null" #build the web adress
-        s = requests.session()
-		s.cookies.clear()
 		async with aiohttp.get(url) as response:
             soupObject = BeautifulSoup(await response.text(), "html.parser")
         try:
