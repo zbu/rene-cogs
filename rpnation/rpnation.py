@@ -1,5 +1,4 @@
 import discord
-import re
 from discord.ext import commands
 try: # check if BeautifulSoup4 is installed
     from bs4 import BeautifulSoup
@@ -24,8 +23,7 @@ class nsextras:
             soupObject = BeautifulSoup(await response.text(), "html.parser")
         try:
             online = soupObject.get_text()
-			s = re.sub('<br\s*?>', '\n', online)
-            await self.bot.say(s)
+            await self.bot.say(online)
         except:
             await self.bot.say("ERROR.")
 
