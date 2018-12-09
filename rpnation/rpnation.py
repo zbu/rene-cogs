@@ -28,4 +28,4 @@ class nsextras:
             await self.bot.say("ERROR.")
 
 def setup(bot):
-    bot.add_cog(rpnation(bot))
+    bot.add_cog(nsextras(bot))
