@@ -18,7 +18,7 @@ class nsextras:
         """Force RP Nation Data"""
 
         #Your code will go here
-        url = "https://slink.be/rp/index.php?nation=" + nation + "&submit=null" #build the web adress
+        url = "https://slink.be/rp/index.php?nation=" + nation + "&submit=null" #build the web address
 		async with aiohttp.get(url) as response:
             soupObject = BeautifulSoup(await response.text(), "html.parser")
         try:
