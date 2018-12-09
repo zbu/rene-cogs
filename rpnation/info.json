@@ -1,0 +1,10 @@
+{
+    "AUTHOR" : "Rene Cogs",
+    "INSTALL_MSG" : "Force RP Nation Stats can be viewed",
+    "NAME" : "nsextras",
+    "SHORT" : "Force RP Nation Stats",
+    "DESCRIPTION" : "This commands shows the current GDP and population of a Force RP Nation.",
+    "TAGS" : ["example", "tags", "list"],
+    "REQUIREMENTS" : ["tabulate", "Pillow"],
+    "HIDDEN" : false
+}
