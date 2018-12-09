@@ -15,11 +15,11 @@ class nsextras:
 
     @commands.command()
     async def rpnation(self, nation):
-        """Force RP Nation Data"""
+        """Force RP Nation Info"""
 
         #Your code will go here
-        url = "https://slink.be/rp/index.php?nation=" + nation + "&submit=null" #build the web address
-		async with aiohttp.get(url) as response:
+        url = "https://slink.be/rp/index.php?nation=" + nation + "&submit=null" #build the web adress
+        async with aiohttp.get(url) as response:
             soupObject = BeautifulSoup(await response.text(), "html.parser")
         try:
             online = soupObject.get_text()
