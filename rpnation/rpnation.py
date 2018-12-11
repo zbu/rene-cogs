@@ -18,7 +18,7 @@ class nsextras:
         """Force RP Nation Info"""
 
         #Your code will go here
-        url = "https://slink.be/rp/index.php?nation=" + nation + "&submit=null" #build the web adress
+        url = "https://slink.be/rp/discordapi.php?nation=" + nation #build the web adress
         async with aiohttp.get(url) as response:
             soupObject = BeautifulSoup(await response.text(), "html.parser")
         try:
