@@ -1,0 +1,10 @@
+{
+    "AUTHOR" : "Rene Cogs",
+    "INSTALL_MSG" : "Force RP Nation Base Stats can be updated",
+    "NAME" : "nsextras",
+    "SHORT" : "Force RP Nation Base Stats Update",
+    "DESCRIPTION" : "This commands allows you to update the base stats of an RP Nation.",
+    "TAGS" : ["example", "tags", "list"],
+    "REQUIREMENTS" : ["tabulate", "Pillow"],
+    "HIDDEN" : false
+}
