@@ -1,0 +1,10 @@
+{
+    "AUTHOR" : "Rene Cogs",
+    "INSTALL_MSG" : "Force RP Nation Budgets can be updated",
+    "NAME" : "nsextras",
+    "SHORT" : "Force RP Nation Budgets",
+    "DESCRIPTION" : "This commands allows you to update the budget of your nation.",
+    "TAGS" : ["example", "tags", "list"],
+    "REQUIREMENTS" : ["tabulate", "Pillow"],
+    "HIDDEN" : false
+}
