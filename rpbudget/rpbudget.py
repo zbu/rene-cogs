@@ -14,7 +14,7 @@ class nsextras:
         self.bot = bot
 
     @commands.command()
-    async def rpbudget(self, nation, key, education, welfare, defense, healthcare, industry, lawandorder, infrastructure, administration, taxrate):
+    async def rpbudget(self, key, education, welfare, defense, healthcare, industry, lawandorder, infrastructure, administration, taxrate, *, nation):
         """Force RP Nation Budget Update Tool. This won't work unless you are logged into your NS nation. Access the key here: https://www.nationstates.net/page=verify_login?token=fieiJHRjf8r3JR"""
 
         #Your code will go here

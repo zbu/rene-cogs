@@ -14,7 +14,7 @@ class nsextras:
         self.bot = bot
 
     @commands.command()
-    async def rpnation(self, nation):
+    async def rpnation(self, *, nation):
         """Force RP Nation Info"""
 
         #Your code will go here
