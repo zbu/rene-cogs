@@ -10,7 +10,7 @@ import aiohttp
 class nsextras:
     """NS Extras"""
 
-    def __init__(self, ctx, bot):
+    def __init__(self, bot, ctx):
         self.bot = bot
 
     @commands.command()
