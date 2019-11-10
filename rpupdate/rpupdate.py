@@ -18,7 +18,7 @@ class nsextras:
         """Force RP Nation Info"""
 
         #Your code will go here
-        url = "https://slink.be/rp/startingdataupdate.php?nation=" + nation #build the web adress
+        url = "https://iloo.cc/rp/startingdataupdate.php?nation=" + nation #build the web adress
         async with aiohttp.get(url) as response:
             soupObject = BeautifulSoup(await response.text(), "html.parser")
         try:
