@@ -14,11 +14,11 @@ class nsextras:
         self.bot = bot
 
     @commands.command()
-    async def rpnation(self, *, sort_type):
+    async def rpnation(self, *, sort):
         """Force RP Ranking Info"""
 
         #Your code will go here
-        url = "https://iloo.cc/rp/discordranksapi.php?sort" + sort_type #build the web adress
+        url = "https://iloo.cc/rp/discordranksapi.php?sort=" + sort #build the web adress
         async with aiohttp.get(url) as response:
             soupObject = BeautifulSoup(await response.text(), "html.parser")
         try:
