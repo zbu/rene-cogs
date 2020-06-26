@@ -14,7 +14,7 @@ class nsextras:
         self.bot = bot
 
     @commands.command()
-    async def rpnation(self, *, sort):
+    async def rpranks(self, *, sort):
         """Force RP Ranking Info"""
 
         #Your code will go here
